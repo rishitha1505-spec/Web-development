@@ -1,0 +1,75 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+  }
+  
+  /* Hamburger Icon */
+  .menu-icon {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+  }
+  
+  /* Hide checkbox */
+  #menu-toggle {
+    display: none;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #444;
+      flex-direction: column;
+      display: none;
+    }
+  
+    #menu-toggle:checked + .menu-icon + .nav-links {
+      display: flex;
+    }
+  
+    .nav-links li {
+      padding: 1em;
+      border-top: 1px solid #555;
+    }
+  }
+  
